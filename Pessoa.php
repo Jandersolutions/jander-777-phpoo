@@ -6,7 +6,13 @@ class Pessoa{
     public $nome;
     public $idade;
     #metodos pessoa
-
+    public function correr($km){
+    echo $this->nome." Esta correndo!";
+	    for($i = 0;$km > $i; $i++) {
+		    echo ".";
+	    }
+	    echo $this->nome." terminou de correr";
+}
 }
 
 #objetos Pessoa
@@ -23,4 +29,7 @@ $pessoa2->idade = 30;
 echo $pessoa1->nome;
 echo"</br>";
 echo $pessoa1->idade;
+echo"</br>";
+#exbir o metodo da classe no objeto pessoa1
+echo $pessoa1->correr(50);
 include ('footer.php');
